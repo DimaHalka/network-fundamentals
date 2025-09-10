@@ -39,8 +39,8 @@ IPv6 doesn't need NAT.
 |                    Data (Payload)                             |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-Field Descriptions
-------------------
+```
+
 - Version: 4 bits, indicates IPv4 (value = 4).
 - IHL (Internet Header Length): 4 bits, number of 32-bit words in the header.
 - Type of Service (ToS): 8 bits, QoS parameters.
@@ -55,4 +55,3 @@ Field Descriptions
 - Destination Address: 32 bits, receiver IP address.
 - Options: Variable length (optional).
 - Data: Payload carried by the packet.
-```
