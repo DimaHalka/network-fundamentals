@@ -41,17 +41,21 @@ IPv6 doesn't need NAT.
 
 ```
 
-- Version: 4 bits, indicates IPv4 (value = 4).
-- IHL (Internet Header Length): 4 bits, number of 32-bit words in the header.
-- Type of Service (ToS): 8 bits, QoS parameters.
-- Total Length: 16 bits, total packet size (header + data).
-- Identification: 16 bits, unique ID for fragmentation.
-- Flags: 3 bits, control fragmentation.
-- Fragment Offset: 13 bits, position of fragment in the original packet.
-- Time to Live (TTL): 8 bits, maximum hops before discard.
-- Protocol: 8 bits, indicates upper-layer protocol (e.g., TCP=6, UDP=17).
-- Header Checksum: 16 bits, error-checking for header.
-- Source Address: 32 bits, sender IP address.
-- Destination Address: 32 bits, receiver IP address.
-- Options: Variable length (optional).
-- Data: Payload carried by the packet.
+Version: 4 bits, indicates IPv4 (value = 4).
+IHL (Internet Header Length): 4 bits, number of 32-bit words in the header.
+Type of Service (ToS): 8 bits, QoS parameters.
+Total Length: 16 bits, total packet size (header + data).
+Identification: 16 bits, unique ID for fragmentation.
+Flags: 3 bits, control fragmentation.
+Fragment Offset: 13 bits, position of fragment in the original packet.
+Time to Live (TTL): 8 bits, maximum hops before discard.
+Protocol: 8 bits, indicates upper-layer protocol (e.g., TCP=6, UDP=17).
+Header Checksum: 16 bits, error-checking for header.
+Source Address: 32 bits, sender IP address.
+Destination Address: 32 bits, receiver IP address.
+Options: Variable length (optional).
+Data: Payload carried by the packet.
+
+Ethernet has an MTU (Maximum Transmission Unit) of 1500 bytes so most IPv4 packets are less than 1500 bytes. Max packet in IPv4 is 64K but fragmentation is avoided today. IPv6 can technically carry much larger payloads using "jumbograms" (up to 4 GB), but those are rare.
+
+
