@@ -1,6 +1,6 @@
-# Tried on Ununtu 24.04
+```
+Tried on Ununtu 24.04
 
-'''
 sudo apt install apache2 -y
 sudo systemctl status apache2
 sudo systemctl restart apache2
@@ -12,4 +12,4 @@ curl -I http://192.168.64.2:80/
 curl -I http://192.168.64.2:10000/
 
 /var/www/html/index.html
-'''
+```
